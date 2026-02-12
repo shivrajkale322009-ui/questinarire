@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Clinic WhatsApp AI Chatbot - Project Questionnaire</title>
+  <meta name="description"
+    content="Complete this questionnaire to get your custom WhatsApp AI chatbot for appointment booking">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="background-animation"></div>
+
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <h1>Medical Clinic WhatsApp AI Chatbot</h1>
+        <p class="subtitle">Project Questionnaire</p>
+        <div class="project-info">
+          <div class="info-item">
+            <span class="label">One-time Cost:</span>
+            <span class="value">₹7,000</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Free Modifications:</span>
+            <span class="value">1 month</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Client Number:</span>
+            <span class="value">+91 84688 45210</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text">
+        <span id="currentStep">1</span> of <span id="totalSteps">9</span> sections completed
+      </div>
+    </div>
+
+    <form id="questionnaireForm" class="questionnaire-form">
+      <!-- Section 1: Clinic Information -->
+      <div class="form-section active" data-section="1">
+        <h2 class="section-title">Section 1: Clinic Information</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">1.1 Basic Clinic Details</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="clinicName">Clinic Name <span class="required">*</span></label>
+              <input type="text" id="clinicName" name="clinicName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="ownerName">Clinic Owner/Doctor Name <span class="required">*</span></label>
+              <input type="text" id="ownerName" name="ownerName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Contact Email <span class="required">*</span></label>
+              <input type="email" id="contactEmail" name="contactEmail" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="clinicAddress">Clinic Address <span class="required">*</span></label>
+              <textarea id="clinicAddress" name="clinicAddress" rows="2" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="cityState">City/State <span class="required">*</span></label>
+              <input type="text" id="cityState" name="cityState" required>
+            </div>
+
+            <div class="form-group">
+              <label for="pincode">Pincode <span class="required">*</span></label>
+              <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">1.2 Operating Hours</h3>
+          <div class="form-grid">
+            <!-- Monday - Friday From -->
+            <div class="form-group full-width">
+              <label>Monday - Friday: From</label>
+              <div class="time-select-group">
+                <select name="mondayFridayFromHour" class="time-select">
+                  <option value="">Hour</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09" selected>09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <span class="time-separator">:</span>
+                <select name="mondayFridayFromMinute" class="time-select">
+                  <option value="00" selected>00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <select name="mondayFridayFromPeriod" class="time-select">
+                  <option value="AM" selected>AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Monday - Friday To -->
+            <div class="form-group full-width">
+              <label>Monday - Friday: To</label>
+              <div class="time-select-group">
+                <select name="mondayFridayToHour" class="time-select">
+                  <option value="">Hour</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06" selected>06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <span class="time-separator">:</span>
+                <select name="mondayFridayToMinute" class="time-select">
+                  <option value="00" selected>00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <select name="mondayFridayToPeriod" class="time-select">
+                  <option value="AM">AM</option>
+                  <option value="PM" selected>PM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Saturday From -->
+            <div class="form-group full-width">
+              <label>Saturday: From</label>
+              <div class="time-select-group">
+                <select name="saturdayFromHour" class="time-select">
+                  <option value="">Hour</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09" selected>09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <span class="time-separator">:</span>
+                <select name="saturdayFromMinute" class="time-select">
+                  <option value="00" selected>00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <select name="saturdayFromPeriod" class="time-select">
+                  <option value="AM" selected>AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Saturday To -->
+            <div class="form-group full-width">
+              <label>Saturday: To</label>
+              <div class="time-select-group">
+                <select name="saturdayToHour" class="time-select">
+                  <option value="">Hour</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="01" selected>01</option>
+                </select>
+                <span class="time-separator">:</span>
+                <select name="saturdayToMinute" class="time-select">
+                  <option value="00" selected>00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <select name="saturdayToPeriod" class="time-select">
+                  <option value="AM">AM</option>
+                  <option value="PM" selected>PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group full-width">
+              <label>
+                <input type="checkbox" id="saturdayClosed" name="saturdayClosed">
+                <span>Saturday Closed</span>
+              </label>
+            </div>
+
+            <!-- Sunday From -->
+            <div class="form-group full-width">
+              <label>Sunday: From</label>
+              <div class="time-select-group">
+                <select name="sundayFromHour" class="time-select">
+                  <option value="">Hour</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10" selected>10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <span class="time-separator">:</span>
+                <select name="sundayFromMinute" class="time-select">
+                  <option value="00" selected>00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <select name="sundayFromPeriod" class="time-select">
+                  <option value="AM" selected>AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Sunday To -->
+            <div class="form-group full-width">
+              <label>Sunday: To</label>
+              <div class="time-select-group">
+                <select name="sundayToHour" class="time-select">
+                  <option value="">Hour</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="02" selected>02</option>
+                </select>
+                <span class="time-separator">:</span>
+                <select name="sundayToMinute" class="time-select">
+                  <option value="00" selected>00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <select name="sundayToPeriod" class="time-select">
+                  <option value="AM">AM</option>
+                  <option value="PM" selected>PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group full-width">
+              <label>
+                <input type="checkbox" id="sundayClosed" name="sundayClosed">
+                <span>Sunday Closed</span>
+              </label>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="holidayDates">Holiday Dates (if any)</label>
+              <input type="text" id="holidayDates" name="holidayDates" placeholder="e.g., Jan 26, Aug 15, Oct 2">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">1.3 Clinic Services</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="servicesOffered">List all services offered <span class="required">*</span></label>
+              <textarea id="servicesOffered" name="servicesOffered" rows="4"
+                placeholder="e.g., General Consultation, Dental Cleaning, Root Canal, Teeth Whitening"
+                required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">1.4 Appointment Details</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="appointmentDuration">Appointment Duration (in minutes) <span class="required">*</span></label>
+              <input type="number" id="appointmentDuration" name="appointmentDuration" min="5" max="180" required>
+            </div>
+
+            <div class="form-group">
+              <label for="maxAppointments">Maximum Appointments Per Day <span class="required">*</span></label>
+              <input type="number" id="maxAppointments" name="maxAppointments" min="1" max="100" required>
+            </div>
+
+            <div class="form-group">
+              <label for="consultationFee">Consultation Fee (₹) <span class="required">*</span></label>
+              <input type="number" id="consultationFee" name="consultationFee" min="0" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="cancellationPolicy">Cancellation Policy <span class="required">*</span></label>
+              <input type="text" id="cancellationPolicy" name="cancellationPolicy"
+                placeholder="e.g., 24 hours notice required" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-primary next-btn" data-next="2">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 2: WhatsApp Bot Configuration -->
+      <div class="form-section" data-section="2">
+        <h2 class="section-title">Section 2: WhatsApp Bot Configuration</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">2.1 WhatsApp Business Number</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Which phone number will be used for this WhatsApp bot? <span class="required">*</span></label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="whatsappNumberType" value="new" required>
+                  <span>New number (to be purchased)</span>
+                </label>
+                <label>
+                  <input type="radio" name="whatsappNumberType" value="existing">
+                  <span>Existing clinic number</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="existingNumber">If existing, enter number:</label>
+              <input type="tel" id="existingNumber" name="existingNumber" placeholder="+91">
+            </div>
+
+            <div class="info-box">
+              <p><strong>Note:</strong> This number will be dedicated to the bot only and cannot be used for personal
+                WhatsApp simultaneously.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">2.2 Bot Welcome Message</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="welcomeMessage">What should the bot say when someone texts first time? <span
+                  class="required">*</span></label>
+              <textarea id="welcomeMessage" name="welcomeMessage" rows="5"
+                placeholder='Example: "Welcome to [Clinic Name]! 👋 How can I help you today? Type:\n1️⃣ Book Appointment\n2️⃣ Cancel Appointment\n3️⃣ Reschedule\n4️⃣ FAQ"'
+                required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">2.3 Emergency Keywords</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="emergencyKeywords">What keywords should trigger an emergency alert?</label>
+              <input type="text" id="emergencyKeywords" name="emergencyKeywords"
+                placeholder='e.g., "emergency", "urgent", "pain", "hospital"'>
+            </div>
+
+            <div class="form-group">
+              <label for="doctorWhatsApp">Doctor's WhatsApp for alerts</label>
+              <input type="tel" id="doctorWhatsApp" name="doctorWhatsApp" placeholder="+91">
+            </div>
+
+            <div class="form-group">
+              <label for="doctorEmailAlert">Doctor's Email for alerts</label>
+              <input type="email" id="doctorEmailAlert" name="doctorEmailAlert">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="patientNotification">Also notify patient with:</label>
+              <input type="text" id="patientNotification" name="patientNotification"
+                placeholder="e.g., Emergency received. We'll contact you shortly.">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">2.4 Frequently Asked Questions (FAQ)</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="faqTimings">What are your clinic timings?</label>
+              <textarea id="faqTimings" name="faqTimings" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqFee">How much is the consultation fee?</label>
+              <textarea id="faqFee" name="faqFee" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqAddress">What is your clinic address?</label>
+              <textarea id="faqAddress" name="faqAddress" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqServices">What services do you offer?</label>
+              <textarea id="faqServices" name="faqServices" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqOnlineConsult">Do you accept online consultations?</label>
+              <textarea id="faqOnlineConsult" name="faqOnlineConsult" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqDocuments">What documents do I need to bring?</label>
+              <textarea id="faqDocuments" name="faqDocuments" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqPrescription">Do you provide prescription copies?</label>
+              <textarea id="faqPrescription" name="faqPrescription" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqParking">Is parking available?</label>
+              <textarea id="faqParking" name="faqParking" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqOther1">Other FAQ:</label>
+              <textarea id="faqOther1" name="faqOther1" rows="2"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="faqOther2">Other FAQ:</label>
+              <textarea id="faqOther2" name="faqOther2" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="1">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="3">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 3: Appointment Management -->
+      <div class="form-section" data-section="3">
+        <h2 class="section-title">Section 3: Appointment Management</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">3.1 Appointment Booking</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>What information should the bot collect from patients?</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="collectFullName" checked>
+                  <span>Full Name</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectAge">
+                  <span>Age</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectPhone" checked>
+                  <span>Phone Number</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectEmail">
+                  <span>Email</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectGender">
+                  <span>Gender</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectSymptoms">
+                  <span>Symptoms/Chief Complaint</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectFirstTime">
+                  <span>First-time patient (Yes/No)</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="collectInsurance">
+                  <span>Insurance details</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="collectOther">Other information to collect:</label>
+              <input type="text" id="collectOther" name="collectOther">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">3.2 Appointment Cancellation & Rescheduling</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Can patients cancel/reschedule their own appointments? <span class="required">*</span></label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="cancelReschedule" value="yes" required>
+                  <span>Yes (Allow patients to do this via bot)</span>
+                </label>
+                <label>
+                  <input type="radio" name="cancelReschedule" value="no">
+                  <span>No (Manual approval required from doctor)</span>
+                </label>
+                <label>
+                  <input type="radio" name="cancelReschedule" value="conditional">
+                  <span>Yes, but only within certain hours</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cancelHours">If conditional, within how many hours?</label>
+              <input type="number" id="cancelHours" name="cancelHours" min="1" max="72">
+            </div>
+
+            <div class="form-group">
+              <label for="noticeRequired">Cancellation/Reschedule Notice Required (hours)</label>
+              <input type="number" id="noticeRequired" name="noticeRequired" min="1" max="72" placeholder="e.g., 24">
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="2">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="4">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 4: Multilingual Support -->
+      <div class="form-section" data-section="4">
+        <h2 class="section-title">Section 4: Multilingual Support</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">4.1 Languages Required</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Select languages to support:</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="langEnglish" checked>
+                  <span>English</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="langHindi">
+                  <span>Hindi</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="langMarathi">
+                  <span>Marathi</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="langOther">Other language:</label>
+              <input type="text" id="langOther" name="langOther">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">4.2 Translations Needed</h3>
+          <div class="translation-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>English</th>
+                  <th>Hindi</th>
+                  <th>Marathi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Welcome</td>
+                  <td><input type="text" name="transWelcomeHindi" placeholder="स्वागत है"></td>
+                  <td><input type="text" name="transWelcomeMarathi" placeholder="स्वागत"></td>
+                </tr>
+                <tr>
+                  <td>Book Appointment</td>
+                  <td><input type="text" name="transBookHindi" placeholder="अपॉइंटमेंट बुक करें"></td>
+                  <td><input type="text" name="transBookMarathi" placeholder="अपॉइंटमेंट बुक करा"></td>
+                </tr>
+                <tr>
+                  <td>Cancel Appointment</td>
+                  <td><input type="text" name="transCancelHindi" placeholder="अपॉइंटमेंट रद्द करें"></td>
+                  <td><input type="text" name="transCancelMarathi" placeholder="अपॉइंटमेंट रद्द करा"></td>
+                </tr>
+                <tr>
+                  <td>Reschedule</td>
+                  <td><input type="text" name="transRescheduleHindi" placeholder="पुनः शेड्यूल करें"></td>
+                  <td><input type="text" name="transRescheduleMarathi" placeholder="पुनः शेड्यूल करा"></td>
+                </tr>
+                <tr>
+                  <td>FAQ</td>
+                  <td><input type="text" name="transFaqHindi" placeholder="सामान्य प्रश्न"></td>
+                  <td><input type="text" name="transFaqMarathi" placeholder="वारंवार विचारले जाणारे प्रश्न"></td>
+                </tr>
+                <tr>
+                  <td>Emergency</td>
+                  <td><input type="text" name="transEmergencyHindi" placeholder="आपातकालीन"></td>
+                  <td><input type="text" name="transEmergencyMarathi" placeholder="आणीबाणी"></td>
+                </tr>
+                <tr>
+                  <td>Thank You</td>
+                  <td><input type="text" name="transThankHindi" placeholder="धन्यवाद"></td>
+                  <td><input type="text" name="transThankMarathi" placeholder="धन्यवाद"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="3">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="5">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 5: Google Sheets Integration -->
+      <div class="form-section" data-section="5">
+        <h2 class="section-title">Section 5: Google Sheets Integration</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">5.1 Data to Track</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>What appointment data should be stored in Google Sheets?</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="trackName" checked>
+                  <span>Patient Name</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackPhone" checked>
+                  <span>Patient Phone Number</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackDateTime" checked>
+                  <span>Appointment Date & Time</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackService">
+                  <span>Service/Reason for Visit</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackStatus" checked>
+                  <span>Status (Booked/Completed/Cancelled)</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackAge">
+                  <span>Patient Age</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackEmail">
+                  <span>Patient Email</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="trackSymptoms">
+                  <span>Symptoms/Chief Complaint</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="trackOther">Other data to track:</label>
+              <input type="text" id="trackOther" name="trackOther">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">5.2 Google Sheets Access</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="googleEmail">Google Account Email for Sheets <span class="required">*</span></label>
+              <input type="email" id="googleEmail" name="googleEmail" required>
+            </div>
+
+            <div class="info-box">
+              <p><strong>Note:</strong> We will create a shared Google Sheet where all appointment data auto-updates
+                from WhatsApp bot.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="4">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="6">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 6: Admin Panel Access -->
+      <div class="form-section" data-section="6">
+        <h2 class="section-title">Section 6: Admin Panel Access</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">6.1 Admin Credentials</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="adminEmail">Doctor's Email for Admin Login <span class="required">*</span></label>
+              <input type="email" id="adminEmail" name="adminEmail" required>
+            </div>
+
+            <div class="form-group">
+              <label for="adminPassword">Preferred Password <span class="required">*</span></label>
+              <input type="password" id="adminPassword" name="adminPassword" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">6.2 Admin Panel Features Needed</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Select features needed in admin panel:</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="featureViewCalendar" checked>
+                  <span>View all appointments (calendar view)</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="featureManualAdd">
+                  <span>Manually add/edit appointments</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="featureUpdateInfo">
+                  <span>Update clinic information (timings, services, fees)</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="featureEmergencyHistory">
+                  <span>View emergency alerts history</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="featureBulkMessages">
+                  <span>Send bulk messages to patients</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="featureReports">
+                  <span>Download appointment reports</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="featureOther">Other features needed:</label>
+              <input type="text" id="featureOther" name="featureOther">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">6.3 Doctor Notifications</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>How should the doctor be notified of New Appointments?</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="radio" name="notifyNewAppt" value="whatsapp">
+                  <span>Via WhatsApp</span>
+                </label>
+                <label>
+                  <input type="radio" name="notifyNewAppt" value="email">
+                  <span>Via Email</span>
+                </label>
+                <label>
+                  <input type="radio" name="notifyNewAppt" value="both" checked>
+                  <span>Both</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label>How should the doctor be notified of Cancellations?</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="radio" name="notifyCancellation" value="whatsapp">
+                  <span>Via WhatsApp</span>
+                </label>
+                <label>
+                  <input type="radio" name="notifyCancellation" value="email">
+                  <span>Via Email</span>
+                </label>
+                <label>
+                  <input type="radio" name="notifyCancellation" value="both" checked>
+                  <span>Both</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label>How should the doctor be notified of Emergency Messages?</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="radio" name="notifyEmergency" value="whatsapp" checked>
+                  <span>Via WhatsApp</span>
+                </label>
+                <label>
+                  <input type="radio" name="notifyEmergency" value="email">
+                  <span>Via Email</span>
+                </label>
+                <label>
+                  <input type="radio" name="notifyEmergency" value="both">
+                  <span>Both</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="5">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="7">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 7: Additional Requirements -->
+      <div class="form-section" data-section="7">
+        <h2 class="section-title">Section 7: Additional Requirements</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">7.1 Special Features</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="specialFeatures">Any other features you need?</label>
+              <textarea id="specialFeatures" name="specialFeatures" rows="4"
+                placeholder="Describe any additional features or customizations you'd like"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">7.2 Integration with Existing Systems</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Do you use any existing systems that need integration?</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="existingSystem" value="no" checked>
+                  <span>No</span>
+                </label>
+                <label>
+                  <input type="radio" name="existingSystem" value="yes">
+                  <span>Yes</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="systemDetails">If yes, please specify:</label>
+              <input type="text" id="systemDetails" name="systemDetails"
+                placeholder="e.g., Practice management software, CRM, etc.">
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="6">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="8">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 8: Project Timeline & Support -->
+      <div class="form-section" data-section="8">
+        <h2 class="section-title">Section 8: Project Timeline & Support</h2>
+
+        <div class="subsection">
+          <h3 class="subsection-title">8.1 Timeline</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="completionDate">When do you need this project completed? <span
+                  class="required">*</span></label>
+              <input type="date" id="completionDate" name="completionDate" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">8.2 Support Contact</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="primaryContact">Primary Contact for Clarifications <span class="required">*</span></label>
+              <input type="tel" id="primaryContact" name="primaryContact" placeholder="+91" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Preferred Communication Method:</label>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="commWhatsApp" checked>
+                  <span>WhatsApp</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="commPhone">
+                  <span>Phone Call</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="commEmail">
+                  <span>Email</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="7">← Previous</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="9">Next Section →</button>
+        </div>
+      </div>
+
+      <!-- Section 9: Payment & Terms Confirmation -->
+      <div class="form-section" data-section="9">
+        <h2 class="section-title">Section 9: Payment & Terms Confirmation</h2>
+
+        <div class="subsection">
+          <div class="terms-box">
+            <h3>Project Terms</h3>
+            <ul>
+              <li><strong>Project Cost:</strong> ₹7,000 (one-time)</li>
+              <li><strong>Monthly System Charges:</strong> As applicable (charged separately based on actual usage)</li>
+              <li><strong>Free Modifications Period:</strong> 1 month from project start</li>
+              <li><strong>Future Changes:</strong> Charges will apply per modification request</li>
+            </ul>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width checkbox-group">
+              <label>
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <span>I agree to the above terms <span class="required">*</span></span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="clientSignature">Client Signature (Full Name) <span class="required">*</span></label>
+              <input type="text" id="clientSignature" name="clientSignature" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signatureDate">Date <span class="required">*</span></label>
+              <input type="date" id="signatureDate" name="signatureDate" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <h4>Instructions for Client:</h4>
+          <ol>
+            <li>Fill out all sections clearly</li>
+            <li>Provide accurate clinic information</li>
+            <li>List out all FAQ answers in detail</li>
+            <li>Share Google Sheet access email</li>
+            <li>Confirm the WhatsApp number to be used</li>
+            <li>Return completed form within 24 hours</li>
+          </ol>
+          <p><strong>Next Step:</strong> Once received, we'll begin development and deployment within 3-5 business days.
+          </p>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary prev-btn" data-prev="8">← Previous</button>
+          <button type="submit" class="btn btn-success">Submit Questionnaire ✓</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      <div class="success-content">
+        <div class="success-icon">✓</div>
+        <h2>Questionnaire Submitted Successfully!</h2>
+        <p>Thank you for completing the questionnaire. We'll review your requirements and get back to you within 24
+          hours.</p>
+        <p class="contact-info">For any questions, contact us at <strong>+91 84688 45210</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
