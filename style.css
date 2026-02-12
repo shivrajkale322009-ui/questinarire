@@ -1,24 +1,24 @@
 :root {
-    /* Color Palette */
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
-    --secondary-color: #8b5cf6;
-    --success-color: #10b981;
-    --danger-color: #ef4444;
-    --warning-color: #f59e0b;
+    /* Color Palette - Lighter Blue Theme */
+    --primary-color: #60a5fa;
+    --primary-dark: #3b82f6;
+    --primary-light: #93c5fd;
+    --secondary-color: #22d3ee;
+    --success-color: #34d399;
+    --danger-color: #f87171;
+    --warning-color: #fbbf24;
 
-    /* Neutral Colors */
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
+    /* Neutral Colors - Lighter */
+    --bg-primary: #1e3a5f;
+    --bg-secondary: #2d4a6f;
+    --bg-tertiary: #3d5a7f;
+    --text-primary: #ffffff;
+    --text-secondary: #e0f2fe;
+    --text-muted: #bfdbfe;
 
-    /* Glassmorphism */
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    --glass-border: rgba(148, 163, 184, 0.1);
+    /* Glassmorphism - More Transparent */
+    --glass-bg: rgba(45, 74, 111, 0.6);
+    --glass-border: rgba(147, 197, 253, 0.25);
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -33,10 +33,10 @@
     --radius-lg: 1.5rem;
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.35);
+    --shadow-glow: 0 0 25px rgba(96, 165, 250, 0.5);
 }
 
 * {
@@ -62,7 +62,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 50%, #1e3a5f 100%);
     overflow: hidden;
 }
 
@@ -71,9 +71,10 @@ body {
     position: absolute;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(96, 165, 250, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(52, 211, 153, 0.12) 0%, transparent 40%);
     animation: backgroundMove 20s ease-in-out infinite;
 }
 
@@ -124,6 +125,54 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
+/* Agency Badge */
+.agency-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(16, 185, 129, 0.15));
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    border-radius: 50px;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.2);
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+.badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(135deg, #34d399, #10b981);
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 8px rgba(52, 211, 153, 0.4);
+}
+
+.badge-text strong {
+    color: #34d399;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(52, 211, 153, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(52, 211, 153, 0.4);
+    }
+}
+
 .subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
@@ -138,15 +187,15 @@ body {
 }
 
 .info-item {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     padding: var(--spacing-sm);
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.2);
     transition: all 0.3s ease;
 }
 
 .info-item:hover {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(59, 130, 246, 0.15);
     transform: translateY(-2px);
     box-shadow: var(--shadow-glow);
 }
@@ -186,7 +235,7 @@ body {
     border-radius: 100px;
     width: 11.11%;
     transition: width 0.5s ease;
-    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
 }
 
 .progress-text {
@@ -303,7 +352,7 @@ select:focus {
     outline: none;
     border-color: var(--primary-color);
     background: rgba(15, 23, 42, 0.7);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 textarea {
@@ -337,7 +386,7 @@ textarea {
     outline: none;
     border-color: var(--primary-color);
     background: rgba(15, 23, 42, 0.7);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .time-select:hover {
@@ -374,7 +423,7 @@ textarea {
     gap: var(--spacing-xs);
     cursor: pointer;
     padding: var(--spacing-sm);
-    background: rgba(99, 102, 241, 0.05);
+    background: rgba(59, 130, 246, 0.05);
     border-radius: var(--radius-sm);
     border: 1px solid transparent;
     transition: all 0.3s ease;
@@ -383,7 +432,7 @@ textarea {
 .checkbox-group label:hover,
 .radio-group label:hover,
 .checkbox-grid label:hover {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     border-color: var(--primary-color);
 }
 
@@ -417,7 +466,7 @@ input[type="radio"] {
 }
 
 .translation-table th {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     font-weight: 600;
     color: var(--primary-light);
 }
@@ -432,8 +481,8 @@ input[type="radio"] {
 
 /* Info Box */
 .info-box {
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: var(--radius-sm);
     padding: var(--spacing-md);
     margin-top: var(--spacing-md);
@@ -466,8 +515,8 @@ input[type="radio"] {
 
 /* Terms Box */
 .terms-box {
-    background: rgba(139, 92, 246, 0.1);
-    border: 2px solid rgba(139, 92, 246, 0.3);
+    background: rgba(6, 182, 212, 0.1);
+    border: 2px solid rgba(6, 182, 212, 0.3);
     border-radius: var(--radius-md);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
@@ -615,9 +664,9 @@ input[type="radio"] {
 .contact-info {
     margin-top: var(--spacing-md);
     padding: var(--spacing-md);
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .contact-info strong {
